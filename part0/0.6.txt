@@ -1,0 +1,11 @@
+note over browser:
+browser handle the event
+prevent default form submission
+make post to add note
+update the page
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note right of browser: payload: {content: "aaa", date: "2026-02-01T08:16:34.489Z"}
+
+server-->browser: {"message":"note created"} (HTTP 201 Created)
