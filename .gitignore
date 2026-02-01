@@ -4,8 +4,8 @@ node_modules/
 .pnp.js
 
 # --- 生产构建目录 (通常不需要提交) ---
-build/
-dist/
+# build/
+# dist/
 
 # --- 环境变量 (Part 3 后端开发时非常重要，防止泄露密码) ---
 .env
