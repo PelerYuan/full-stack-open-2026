@@ -76,6 +76,12 @@ const PersonForm = ({newName, setNewName, newNumber, setNewNumber, persons, setP
                     setNewName('')
                     setNewNumber('')
                 })
+                .catch(error => {
+                    setNotification({message: error.response.data.error, error: true})
+                    setTimeout(() => {
+                        setNotification({message: null, error: false})
+                    }, 3000)
+                })
             setNotification({message: `add ${person.name}'s number`, error: false})
             setTimeout(() => {
                 setNotification({message: null, error: false})
