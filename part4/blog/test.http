@@ -1,13 +1,9 @@
-### Get all blogs
-GET localhost:3003/api/blogs
-
-### Create a blog
-POST localhost:3003/api/blogs
+### Create User
+POST http://localhost:3003/api/users
 Content-Type: application/json
 
 {
-  "title": "Test",
-  "author": "Peler",
-  "url": "test undefined",
-  "likes": 10
+  "username": "Peler",
+  "password": "123",
+  "name": "Peler Yuan"
 }

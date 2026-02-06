@@ -28,12 +28,11 @@ usersRouter.post('/', async (request, response) => {
     const user = new User({
         username,
         name,
-        passwordHash
+        passwordHash,
+        blogs: []
     })
 
-    user.blogs = user.blogs.concat(savedBlog._id)
     const savedUser = await user.save()
-
     response.status(201).json(savedUser)
 })
 
