@@ -152,7 +152,7 @@ describe('Blog app', () => {
                 await blog10.getByRole('button', { name: 'like' }).click()
                 await blog10.getByText(`likes ${i + 1}`).waitFor()
             }
-            
+
             const blogs = page.locator('.blog')
             await expect(blogs.first()).toContainText('Blog with 10 likes')
             await expect(blogs.nth(1)).toContainText('Blog with 5 likes')
