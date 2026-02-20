@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const baseUrl = 'http://localhost:3001/anecdotes'
 
 const getAll = async () => {
@@ -23,7 +25,13 @@ const createNew = async (content) => {
     return await response.json()
 }
 
+const update = async (id, newObject) => {
+    const response = await axios.put(`${baseUrl}/${id}`, newObject)
+    return response.data
+}
+
 export default {
     getAll,
-    createNew
+    createNew,
+    update
 }
